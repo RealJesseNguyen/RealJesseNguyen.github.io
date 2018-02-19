@@ -152,7 +152,7 @@ $(function () {
         countdown = window.requestAnimationFrame(updateCountdown);
         timeLeft = settings.TIME_LIMIT - (Date.now() - start);
         $('#countdown .progress-bar').width(Math.floor((timeLeft / settings.TIME_LIMIT) * 100) +'%');
-        $('#countdown .progress-bar').html(Math.ceil(timeLeft / 1000));
+        $('#countdown .progress-bar').html((timeLeft / 1000).toFixed(2));
 
         if(timeLeft <= 0) {
             $('#countdown .progress-bar').empty();
