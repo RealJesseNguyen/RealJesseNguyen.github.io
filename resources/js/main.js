@@ -36,6 +36,8 @@ $(function () {
                                     .attr('value', i)
                                     .text(i));
     }
+
+    $('#numOptionsSelect').val(4);
     
     function startQuiz() {
         numCorrect = 0;
